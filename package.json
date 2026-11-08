@@ -1,0 +1,10 @@
+{
+  "name": "tempo-timetable-planner",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Tempo — a fully local timetable planner with tasks, notes, focus timer and insights.",
+  "scripts": {
+    "start": "python3 -m http.server 4173"
+  }
+}

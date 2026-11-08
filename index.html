@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-accent="indigo">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Tempo — Timetable Planner</title>
+  <meta name="description" content="A local-first timetable planner with tasks, notes, a focus timer, weekly insights and drag-and-drop scheduling.">
+  <meta name="theme-color" content="#080b11">
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%236366f1'/%3E%3Cpath d='M8 13h16M8 18h7M8 23h10' stroke='white' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M12 6v4M20 6v4' stroke='white' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">        <link rel="stylesheet" href="css/styles.css?v=7">
+        <style>
+          .hide-sm { display: inline; }
+        </style>
+</head>
+<body>
+  <a class="skip-link" href="#view">Skip to content</a>
+
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation"></aside>
+    <div class="sidebar-scrim" id="sidebarScrim" hidden></div>
+
+    <main class="main">
+      <header class="topbar">
+        <button type="button" class="icon-btn only-mobile" id="menuBtn" aria-label="Open menu"></button>
+        <span class="topbar-brand">Tempo</span>
+        <div class="topbar-spacer"></div>
+        <div class="topbar-group">
+          <button type="button" class="icon-btn" id="undoBtn" title="Undo (Ctrl/Cmd+Z)" aria-label="Undo"></button>
+          <button type="button" class="icon-btn" id="redoBtn" title="Redo (Shift+Ctrl/Cmd+Z)" aria-label="Redo"></button>
+        </div>
+        <button type="button" class="search-trigger" id="searchBtn" aria-label="Search or jump">
+          <span class="ico" aria-hidden="true"></span>
+          <span class="search-label" id="searchLabel">Search</span>
+          <kbd>⌘K</kbd>
+        </button>
+        <button type="button" class="icon-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle theme"></button>
+      </header>
+
+      <div class="view" id="view" tabindex="-1"></div>
+    </main>
+  </div>
+
+  <div id="modal-root"></div>
+  <div class="toast-root" id="toast-root" aria-live="polite" aria-atomic="false"></div>
+
+  <noscript>
+    <div class="noscript">Tempo needs JavaScript to run. Please enable it and reload.</div>
+  </noscript>
+
+  <script type="module" src="js/app.js?v=7"></script>
+</body>
+</html>
